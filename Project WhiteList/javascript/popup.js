@@ -10,8 +10,6 @@ var storage = chrome.storage;
 //loads chrome storage of saved whiteListed sites into the temp list and then updates all buttons
 storage.sync.get(`whiteList`, function (results) {
   websites = results.whiteList;
-  updateStudyButton();
-  updateAddOrDeleteButton();
 });
 
 //function that updates the OFF/STUDYING! buttons visual state
@@ -89,3 +87,7 @@ function manageButtonClick() {
 studyButton.addEventListener("click", studyButtonClick);
 addOrDeleteButton.addEventListener("click", addOrDeleteButtonClick);
 manageButton.addEventListener("click", manageButtonClick);
+
+//update buttons as soon as extension popup is opened
+updateStudyButton();
+updateAddOrDeleteButton();
