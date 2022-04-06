@@ -16,4 +16,4 @@ This extension is meant to be a study tool to make those who get distracted easi
 
 #### known bugs
 1) if the very edge of a button is clicked it will play the click animation but not perform its function  
-   (happens bc the button moves when clicked. the Click event listener listens when the user releases their mouse but when the button is pressed it drops down a bit. Thus when the button moves down and the user releases the Click listener does not run)
+   * (happens bc the button moves when clicked. the Click event listener listens when the user releases their mouse but when the button is pressed it drops down a bit. If the user is at the very top of the button then when the button moves and the click is released the user will not be 'clicking' the button when released)
