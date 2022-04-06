@@ -1,7 +1,7 @@
 #About The Extension!
 
 #**Description**
-This extension is meant to be a study tool to make those who get distracted easily when using a web broweser to focus. Allows the user to select websites they would like to add to their 'WhiteList' and when the extension is activated only websites that are in the extension can be accessed and interacted with
+This extension is meant to be a study tool to make those who get distracted easily when using a web browser. Allows the user to select websites they would like to add to their 'WhiteList' and when the extension is activated only websites that are in the extension can be accessed and interacted with
 
 
 #**How to install this google chrome extension**
@@ -15,4 +15,4 @@ This extension is meant to be a study tool to make those who get distracted easi
 8) Locate the extension icon labeled "WhiteList" and press the pin button
 
 #**known bugs**
-occasionally resets the extension's state and memory (reason is unkown)
+occasionally resets the extension's state and memory
