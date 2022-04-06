@@ -15,5 +15,5 @@ This extension is meant to be a study tool to make those who get distracted easi
 8) Locate the extension icon labeled "WhiteList" and press the pin button
 
 #### known bugs
-1) occasionally resets the extension's state and memory
-2) if the very edge of a button is clicked it will play the click animation but not perform its function
+1) if the very edge of a button is clicked it will play the click animation but not perform its function  
+   (happens bc the button moves when clicked. the Click event listener listens when the user releases their mouse but when the button is pressed it drops down a bit. Thus when the button moves down and the user releases the Click listener does not run)
