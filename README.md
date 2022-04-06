@@ -1,4 +1,4 @@
-#<head>About The Extension!</head>
+#<title>About The Extension!</title>
 
 #**Description** <br>
 This extension is meant to be a study tool to make those who get distracted easily when using a web browser. Allows the user to select websites they would like to add to their 'WhiteList' and when the extension is activated only websites that are in the extension can be accessed and interacted with
