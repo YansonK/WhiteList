@@ -15,5 +15,5 @@ This extension is meant to be a study tool to make those who get distracted easi
 8) Locate the extension icon labeled "WhiteList" and press the pin button
 
 #### known bugs
-occasionally resets the extension's state and memory
-if the very edge of a button is clicked it will play the click animation but not perform its function
+1) occasionally resets the extension's state and memory
+2) if the very edge of a button is clicked it will play the click animation but not perform its function
