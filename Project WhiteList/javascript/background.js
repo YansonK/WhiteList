@@ -9,7 +9,7 @@ async function getCurrentTab() {
   let queryOptions = { active: true, currentWindow: true };
   //'tab' will wait until the promise is fullfilled
   let [tab] = await chrome.tabs.query(queryOptions);
-  //console.log("🚀 ~ file: background.js ~ line 26 ~ getCurrentTab ~ tab", tab)
+  console.log("🚀 ~ file: background.js ~ line 26 ~ getCurrentTab ~ tab", tab)
   //once 'tab' is ready with the info 'current' will be set to the tabs url
   storage.sync.set({ current: tab.url }
   );
@@ -20,9 +20,9 @@ async function getCurrentTab() {
 function checkAdded() { 
   let itExists = false;// temp var assumes that it dosent exist
   storage.sync.get("whiteList", function (websites) {
-    //console.log("🚀 ~ file: background.js ~ line 32 ~ websites", websites)
+    console.log("🚀 ~ file: background.js ~ line 32 ~ websites", websites)
     storage.sync.get("current", function (result) {
-      //console.log("🚀 ~ file: background.js ~ line 33 ~ result", result)
+      console.log("🚀 ~ file: background.js ~ line 33 ~ result", result)
       //linear search algorithm
       for (let i = 0; i < websites.whiteList.length; i++) {
         if (websites.whiteList[i] == result.current) {
