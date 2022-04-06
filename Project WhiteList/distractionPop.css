@@ -1,0 +1,32 @@
+
+
+.overlayDistraction{
+display: block;
+opacity: 1;
+background: rgba(0, 0, 0, 0.5);
+position: fixed;
+top: 0; left: 0;
+width: 150vw; height: 150vw;
+/*makes the overlay on top of all document elements*/
+z-index: 2147483646;
+transition: opacity 1s;
+}
+.overlayDistraction.darken{
+    opacity: 1;
+}
+
+.popupDistraction{
+    display: block;
+    opacity: 1;
+    background: rgb(90, 90, 90);
+    position: fixed;
+    top: 12vw; left: 25vw;
+    width: 50vw; height: 25vw;
+    /*makes the popup oin top of the overlay*/
+    z-index: 2147483647;
+    border-radius: 15px;
+
+    text-align: center;
+    line-height: 25vw;
+    font-size: x-large;
+}

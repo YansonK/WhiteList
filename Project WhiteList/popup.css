@@ -1,0 +1,73 @@
+:root{
+    /*hieght of button elemnt*/
+    --btht: 30px;
+    /*inactive color*/
+    --offC: #ffd3bb;
+    /*hover color*/
+    --hovC: #ffb993;
+    /*active color*/
+    --OnC: #ff8b4d;
+
+}
+
+body{
+  background-color: #f9f9f9;
+  color: rgb(20, 20, 20);
+  padding: 5px;
+  width: 200px;
+  font-family: Segoe UI;
+  font-size: 13px;
+}
+
+.title{
+    margin: 15px;
+    height: 20px;
+    font-size: 17px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.button{
+    display: block;
+    position: relative;
+    width: 160px;
+    cursor: pointer;
+    height: var(--btht);
+    line-height: var(--btht);
+    font-size: 1em;
+    background-color: var(--offC);
+    color: #000000;
+    text-transform: uppercase, bold;
+    margin: auto;
+    border-radius: 15px;
+    
+    /* left: 50%;
+    transform: translate(-50%, -50%); */
+
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .button:hover {
+    background-color: var(--hovC);
+  }
+  .button.mini{
+      width: 130px;
+      height: 20px;
+      line-height: 20px;
+  }
+  .button.raised{
+    
+    /* transition-delay: 0.2s; */
+    box-shadow: 0 6px #999;
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1),box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .button.raised:active {
+    
+    transform: translateY(3px);
+    box-shadow: 0 3px #666;
+    background-color: var(--OnC);
+    transition-delay: box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  }
+
