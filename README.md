@@ -16,3 +16,4 @@ This extension is meant to be a study tool to make those who get distracted easi
 
 #### known bugs
 occasionally resets the extension's state and memory
+if the very edge of a button is clicked it will play the click animation but not perform its function
