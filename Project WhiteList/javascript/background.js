@@ -1,16 +1,10 @@
 //a line of code that saves me space and reading
 let storage = chrome.storage;
 
-storage.local.get(["whiteList"], function(items){
-  if(items.whiteList === undefined){
-    
-  }
-});
-
 //the initializationg function that sets/declares important chrome storage varriables
 function initialize(){
   //only sets default vals if never initialzed before
-  storage.get("initialized", function(extension){
+  storage.local.get("initialized", function(extension){
     if(extension.initialized===undefined)
     //'on' determines if the extensions is active
     storage.sync.set({ on: false });
