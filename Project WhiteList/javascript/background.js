@@ -1,6 +1,31 @@
 //a line of code that saves me space and reading
 let storage = chrome.storage;
 
+storage.local.get(["whiteList"], function(items){
+  if(items.whiteList === undefined){
+    
+  }
+});
+
+//the initializationg function that sets/declares important chrome storage varriables
+function initialize(){
+  //only sets default vals if never initialzed before
+  storage.get("initialized", function(extension){
+    if(extension.initialized===undefined)
+    //'on' determines if the extensions is active
+    storage.sync.set({ on: false });
+    //'added' var that determines if a website is added in whitelist
+    storage.sync.set({ added: false });
+    //'whitelist' the array of websites thats stored in the extension
+    storage.sync.set({ whiteList: [] });
+    //this func is called in initial to set our current tab
+    getCurrentTab();
+    //vals have been initialized
+    storage.sync.set({initialized: true});
+  })
+  
+}
+
 //this async func that stores the current tab and sets 
 //'current' a var that stores active tabs url
 async function getCurrentTab() {
@@ -42,7 +67,7 @@ function runningCheck() {
 }
 
 //the meat and potatos of our background script
-getCurrentTab();
+initialize();
 //listens for if a tab is clicked and becomes the "Active" tab
 chrome.tabs.onActivated.addListener(runningCheck);
 //listens for if we load a webpage
