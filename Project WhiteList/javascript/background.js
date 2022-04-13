@@ -5,17 +5,18 @@ let storage = chrome.storage;
 function initialize(){
   //only sets default vals if never initialzed before
   storage.local.get("initialized", function(extension){
-    if(extension.initialized===undefined)
-    //'on' determines if the extensions is active
-    storage.sync.set({ on: false });
-    //'added' var that determines if a website is added in whitelist
-    storage.sync.set({ added: false });
-    //'whitelist' the array of websites thats stored in the extension
-    storage.sync.set({ whiteList: [] });
-    //this func is called in initial to set our current tab
-    getCurrentTab();
-    //vals have been initialized
-    storage.sync.set({initialized: true});
+    if(extension.initialized===undefined){ 
+      //'on' determines if the extensions is active
+      storage.sync.set({ on: false });
+      //'added' var that determines if a website is added in whitelist
+      storage.sync.set({ added: false });
+      //'whitelist' the array of websites thats stored in the extension
+      storage.sync.set({ whiteList: [] });
+      //this func is called in initial to set our current tab
+      getCurrentTab();
+      //vals have been initialized
+      storage.sync.set({initialized: true});}
+    
   })
   
 }
